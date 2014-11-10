@@ -1,0 +1,34 @@
+doctype html
+html(lang="en")
+  head
+    title= title
+  body
+    h1= title
+    h2= subtitle
+    p Report for:
+      strong !{name}
+    p Student id:
+      strong !{id}
+    p Email:
+      strong !{email}
+    p Answers submitted at !{date}
+
+    #summary
+      hr
+      p Summary of results. You obtained !{score} out of !{total}. This ends up giving you !{percent} out of 100.
+      hr
+
+    #details
+      h2 Detailed feedback.
+      for i in Object.keys(questions)
+        h3 Question !{i}:
+        img(src=imgsrc+'/q'+i+'.png', style='max-width: 50%;')
+        p You answered: !{questions[i].answer}
+        if questions[i].ok
+          p That is correct. 1 point (1 possible).
+          if questions[i].considered
+            //- p We considered your answer as: !{questions[i].considered}
+            p Another possible solution was: !{questions[i].solutions[0]}
+        else
+          p.
+            Ooops - we were expecting: !{questions[i].solutions[0]}

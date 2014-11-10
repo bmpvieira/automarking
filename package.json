@@ -1,0 +1,40 @@
+{
+  "name": "autoMarking",
+  "version": "1.0.0",
+  "description": "Auto correct and generate reports for exams results stored in Dat",
+  "main": "index.js",
+  "keywords": [
+    "automation",
+    "marking",
+    "report",
+    "academia",
+    "dat",
+    "streams"
+  ],
+  "bin": {
+    "autoMarking": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Bruno Vieira",
+    "email": "mail@bmpvieira.com"
+  },
+  "homepage": "http://github.com/bmpvieira/autoMarking",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/bmpvieira/autoMarking.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "compute-stdev": "^1.0.0",
+    "concat-stream": "^1.4.6",
+    "dat": "^6.8.4",
+    "jade": "^1.7.0",
+    "split": "^0.3.0",
+    "tape": "^3.0.1",
+    "through2": "^0.6.3",
+    "underscore": "^1.7.0"
+  }
+}
