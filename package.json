@@ -1,5 +1,5 @@
 {
-  "name": "autoMarking",
+  "name": "automarking",
   "version": "1.0.0",
   "description": "Auto correct and generate reports for exams results stored in Dat",
   "main": "index.js",
@@ -12,7 +12,7 @@
     "streams"
   ],
   "bin": {
-    "autoMarking": "index.js"
+    "automarking": "index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,10 +21,10 @@
     "name": "Bruno Vieira",
     "email": "mail@bmpvieira.com"
   },
-  "homepage": "http://github.com/bmpvieira/autoMarking",
+  "homepage": "http://github.com/bmpvieira/automarking",
   "repository": {
     "type": "git",
-    "url": "http://github.com/bmpvieira/autoMarking.git"
+    "url": "http://github.com/bmpvieira/automarking.git"
   },
   "license": "MIT",
   "dependencies": {

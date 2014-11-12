@@ -4,15 +4,15 @@
 ## Install
 
 ```bash
-npm install autoMarking -g
+npm install automarking -g
 ```
 
 
 ## Usage
 
 ```bash
-# autoMarking <path to module that performs correction>
-autoMarking exams/2014-11-29-Wed/SBC361/corrector.js
+# automarking <path to module that performs correction>
+automarking exams/2014-11-29-Wed/SBC361/corrector.js
 ```
 
 ## LICENSE
