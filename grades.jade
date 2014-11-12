@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+  head
+    title Overview
+    script(src='sorttable.js')
+  body
+    h1 Grades
+    table.sortable
+      tr
+        th ID
+        th Name
+        th email
+        th score
+        th pscore
+        th percent
+        th ppercent
+      for student in grades
+        tr
+          td= student.id
+          td= student.name
+          td= student.email
+          td= student.score
+          td= student.pscore
+          td= student.percent
+          td= student.ppercent

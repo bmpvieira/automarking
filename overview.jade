@@ -1,0 +1,57 @@
+doctype html
+html(lang="en")
+  head
+    title Overview
+    script(src='sorttable.js')
+  body
+    h1 Questions
+    for question, question_number in data
+      h2 Question !{question_number}
+      for solution, solution_string in question
+        h3
+          pre Solution !{solution_string}
+        table.sortable
+          tr
+            th Answer
+            th Frequency
+            th Score
+            th IDs
+          for answer, answer_string in solution
+            tr
+              td
+                pre= answer_string
+              td= answer.studentsIDs.length
+              td= answer.score
+              td
+                for studentID in answer.studentsIDs
+                  a(href=studentID+'.html') !{studentID}
+                  | &nbsp;
+    hr
+    h1 Worst Questions
+    table.sortable
+      tr
+        th Number
+        th Failures (i.e. score == 0)
+      for question, question_number in worstQuestions
+        tr
+          th= question_number
+          th= question
+    h1 Grades
+    table.sortable
+      tr
+        th ID
+        th Name
+        th email
+        th score
+        th pscore
+        th percent
+        th ppercent
+      for student in grades
+        tr
+          td= student.id
+          td= student.name
+          td= student.email
+          td= student.score
+          td= student.pscore
+          td= student.percent
+          td= student.ppercent

@@ -15,7 +15,7 @@ html(lang="en")
 
     #summary
       hr
-      p Summary of results. You obtained !{score} out of !{total}. This ends up giving you !{percent} out of 100.
+      p Summary of results. You obtained !{pscore} out of !{ptotal}. This ends up giving you !{ppercent}% out of 100%.
       hr
 
     #details
@@ -23,12 +23,18 @@ html(lang="en")
       for i in Object.keys(questions)
         h3 Question !{i}:
         img(src=imgsrc+'/q'+i+'.png', style='max-width: 50%;')
-        p You answered: !{questions[i].answer}
+        p You answered:
+        pre= questions[i].answer
         if questions[i].ok
           p That is correct. 1 point (1 possible).
           if questions[i].considered
             //- p We considered your answer as: !{questions[i].considered}
-            p Another possible solution was: !{questions[i].solutions[0]}
+            p Another possible solution was:
+            pre= questions[i].solutions[0]
         else
-          p.
-            Ooops - we were expecting: !{questions[i].solutions[0]}
+          p Ooops - we were expecting:
+          pre= questions[i].solutions[0]
+          if questions[i].ptotal === 0
+            p We decided to ignore this question, so it did not affected your grade
+          else
+            p You got !{questions[i].pscore} point (!{questions[i].ptotal} possible)
